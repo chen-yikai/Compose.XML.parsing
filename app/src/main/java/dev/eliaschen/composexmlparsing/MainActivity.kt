@@ -28,9 +28,10 @@ class MainActivity : ComponentActivity() {
                     LocalDataModel provides dataModel,
                     LocalNavController provides navController
                 ) {
-                    when(navController.currentScreen){
+                    when (navController.currentScreen) {
                         Screen.Home -> HomeScreen()
                         Screen.Weather -> WeatherScreen()
+                        else -> {}
                     }
                 }
             }
