@@ -23,7 +23,6 @@ class DataModel(private val context: Application) : AndroidViewModel(context) {
             val file = context.assets.open(city.fileName)
             val element = builder.parse(file).documentElement
             val hours = element.getElementsByTagName("hour")
-            Log.i("xml",city.fileName)
             val weather = Weather(
                 city = element.getElementsByTagName("city").item(0).textContent,
                 latitude = element.getElementsByTagName("latitude").item(0).textContent,
